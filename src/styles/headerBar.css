@@ -1,0 +1,123 @@
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 0;
+  border-bottom: 1px solid silver;
+  margin-bottom: 1.5rem;
+}
+
+header > div {
+  display: flex;
+  flex-direction: row;
+}
+
+header > div:nth-child(1) {
+  align-items: center;
+}
+
+header > div > .img {
+  width: 9rem;
+  cursor: pointer;
+}
+
+header > div > .img > img {
+  width: 100%;
+}
+
+header > div > .input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 45rem;
+  margin-left: 1rem;
+}
+
+header > div > .input > h1 {
+  margin: 0 auto;
+}
+
+header > div > .input > button {
+  display: inline-block;
+  width: 0;
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+header > div > .input > button.active {
+  width: auto;
+  padding: 0.6rem 1rem;
+}
+
+header > div > .input > button:not(.active) {
+  overflow: hidden;
+}
+
+header > div > .input > button:hover {
+  box-shadow: 0 0 5px 1px silver;
+}
+
+header > .nav {
+  margin-left: 12.5rem;
+  gap: 1rem;
+  overflow: auto;
+}
+
+header > .nav > a {
+  display: flex;
+  gap: 0.2rem;
+  position: relative;
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+header > .nav > a::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+header > .nav > a.active::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    padding: 0 1rem;
+    padding-top: 0.5rem;
+    align-items: center;
+  }
+
+  header > div {
+    width: 100%;
+    max-width: 625px;
+  }
+
+  header > div:nth-child(1) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header > div:nth-child(1) > .input {
+    margin: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  header > .nav {
+    margin: 0;
+    gap: 1rem;
+  }
+
+  header > .nav > div {
+    padding: 0.5rem 0.2rem;
+  }
+}

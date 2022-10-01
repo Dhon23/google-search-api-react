@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+
+nav a {
+  padding: 0.7rem;
+  text-decoration: none;
+  color: #263238;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: black;
+  position: absolute;
+  border-radius: 50px;
+  transition: all 0.5s;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+  nav {
+    padding: 0;
+  }
+}

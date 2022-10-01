@@ -1,0 +1,41 @@
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 14rem;
+}
+
+.search-results > a {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.search-results > a > p:nth-child(1),
+.search-results > a > h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: lighter;
+  margin: 0.5rem 0;
+}
+
+.search-results > a > p {
+  color: #616161;
+}
+
+.search-results > a:hover > h3 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .search-results {
+    padding: 0;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  .search-results > a {
+    padding: 0.8rem;
+    box-shadow: 0 0 5px 1px silver;
+  }
+}

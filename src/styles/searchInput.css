@@ -1,0 +1,34 @@
+.search-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid silver;
+  transition: all 0.3s;
+}
+
+.search-input:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px 1px gainsboro;
+}
+
+.search-input:focus-within {
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px 1px gainsboro;
+}
+
+.search-input input {
+  padding: 0.8rem 1.2rem;
+  padding-right: 0;
+  border: none;
+  flex-grow: 1;
+  outline: none;
+}
+
+.search-input svg {
+  width: 2.7rem;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}

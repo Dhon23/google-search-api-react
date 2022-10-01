@@ -1,0 +1,82 @@
+.news-results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 14rem;
+}
+
+.news-results > div {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.news-results > div > a {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-results > div > a > h3 {
+  font-weight: lighter;
+  margin: 0.5rem 0;
+}
+
+.news-results > div > a > span {
+  color: #616161;
+}
+
+.news-results > div > a > span:nth-child(1) {
+  font-size: 14px;
+}
+
+.news-results > div > a > span:nth-child(1) > svg {
+  text-align: right;
+}
+
+.news-results > div > a > span:nth-child(3) {
+  font-size: 12px;
+}
+
+.news-results > div > a:hover > h3 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.news-results > div > p > a {
+  color: darkblue;
+}
+
+.news-results > div > p > a:hover {
+  text-decoration: underline;
+}
+
+.news-results > div > svg {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.news-results > div > svg:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .news-results {
+    padding: 0;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  .news-results > div > a {
+    padding: 0.8rem;
+    box-shadow: 0 0 5px 1px silver;
+  }
+
+  .news-results > div > p {
+    padding: 0.8rem;
+  }
+
+  .news-results > div > svg {
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+}
