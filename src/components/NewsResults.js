@@ -19,30 +19,37 @@ export default function NewsResults({ data }) {
     dispatch(deleteMark(id));
   };
 
-  function mark(id, payload) {
+  function mark(id, payload, idx) {
     if (marks.length !== 0) {
       const idStored = marks.map((el) => el.id);
       for (const el of idStored) {
         if (el === id) {
-          return <BsBookmarkFill onClick={handleUnMark(id)} />;
+          return (
+            <BsBookmarkFill
+              onClick={handleUnMark(id)}
+              data-testid={`mark-${idx}`}
+            />
+          );
         }
       }
     }
-    return <BsBookmark onClick={handleMark(payload)} />;
+    return (
+      <BsBookmark onClick={handleMark(payload)} data-testid={`unmark-${idx}`} />
+    );
   }
 
   return (
-    <div className="news-results">
+    <div className="news-results" data-testid={"news-results"}>
       {data.map((el, idx) => {
         const { id, title, link, source, published } = el;
         return (
-          <div key={idx}>
+          <div key={idx} data-testid={`news-results-${idx}`}>
             <a href={link}>
               <span>{source.title}</span>
               <h3>{title}</h3>
               <span>{timeAgo(published)}</span>
             </a>
-            {mark(id, { id, title, link, source, published })}
+            {mark(id, { id, title, link, source, published }, idx)}
           </div>
         );
       })}

@@ -3,7 +3,7 @@ import { IoImages, IoSearch, IoNewspaperOutline } from "react-icons/io5";
 import "../styles/navBar.css";
 export default function NavBar() {
   return (
-    <nav>
+    <nav data-testid="nav">
       <NavLink to={"/"} end>
         <IoSearch /> Search
       </NavLink>

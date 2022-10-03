@@ -26,9 +26,9 @@ export default function HeaderBar() {
   }, [searchParams]);
 
   return (
-    <header>
+    <header data-testid="header">
       <div>
-        <div onClick={() => navigate("/")} className="img">
+        <div onClick={() => navigate("/")} className="img" data-testid="logo">
           <img src={logo} alt="" />
         </div>
         <div className="input">
@@ -45,29 +45,31 @@ export default function HeaderBar() {
           </button>
         </div>
       </div>
-      <div className="nav">
-        <a
-          onClick={handleClick("search")}
-          className={(type === "search" && "active") || ""}
-        >
-          <IoSearch />
-          Search
-        </a>
-        <a
-          onClick={handleClick("image")}
-          className={(type === "image" && "active") || ""}
-        >
-          <IoImages />
-          Images
-        </a>
-        <a
-          onClick={handleClick("news")}
-          className={(type === "news" && "active") || ""}
-        >
-          <IoNewspaperOutline />
-          News
-        </a>
-      </div>
+      {location.pathname !== "/news/bookmark" && (
+        <div className="nav">
+          <a
+            onClick={handleClick("search")}
+            className={(type === "search" && "active") || ""}
+          >
+            <IoSearch />
+            Search
+          </a>
+          <a
+            onClick={handleClick("image")}
+            className={(type === "image" && "active") || ""}
+          >
+            <IoImages />
+            Images
+          </a>
+          <a
+            onClick={handleClick("news")}
+            className={(type === "news" && "active") || ""}
+          >
+            <IoNewspaperOutline />
+            News
+          </a>
+        </div>
+      )}
     </header>
   );
 }

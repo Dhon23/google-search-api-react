@@ -17,19 +17,24 @@ export default function NewsMarked() {
         marks.map((el, idx) => {
           const { id, title, link, source, published } = el;
           return (
-            <div key={idx}>
+            <div key={idx} data-testid={`news-results-${idx}`}>
               <a href={link}>
                 <span>{source.title}</span>
                 <h3>{title}</h3>
                 <span>{timeAgo(published)}</span>
               </a>
-              <BsBookmarkFill onClick={() => dispatch(deleteMark(id))} />
+              <BsBookmarkFill
+                onClick={() => dispatch(deleteMark(id))}
+                data-testid={`mark-${idx}`}
+              />
             </div>
           );
         })
       ) : (
         <div>
-          <p>Bookmark some <Link to={"/news"}>news</Link> ...</p>
+          <p data-testid="bookmark-some-news">
+            Bookmark some <Link to={"/news"}>news</Link> ...
+          </p>
         </div>
       )}
     </div>

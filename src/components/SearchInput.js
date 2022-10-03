@@ -14,6 +14,7 @@ export default function SearchInput({ type, searchValue }) {
 
   function handleEnter(e) {
     if (e.key === "Enter") return handleSearch();
+    else return
   }
 
   function handleSearch() {
@@ -28,8 +29,9 @@ export default function SearchInput({ type, searchValue }) {
         type="text"
         placeholder={type !== "search" ? "Search " + type : "Search"}
         defaultValue={searchValue}
+        data-testid="search-input"
       />
-      <IoSearch onClick={handleSearch} />
+      <IoSearch data-testid="search-icon" onClick={handleSearch} />
     </div>
   );
 }

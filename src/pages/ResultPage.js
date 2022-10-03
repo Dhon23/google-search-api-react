@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -37,8 +38,6 @@ export default function ResultPage() {
         return <ImageResults data={data.image_results} />;
       case "news":
         return <NewsResults data={data.entries} />;
-      default:
-        break;
     }
   }
 
@@ -56,10 +55,9 @@ export default function ResultPage() {
         setData(result.data);
       })
       .catch((err) => {
-        if (err.response) {
-          if (err.response.status === 404) navigate("/notfound");
-        }
-        console.log(err);
+        if (err?.response?.status === 404) return navigate("/notfound");
+        // console.log(err);
+        // return;
       })
       .finally(() => setIsLoading(false));
   }, [searchParams]);
