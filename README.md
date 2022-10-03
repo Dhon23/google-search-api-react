@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+<br />
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Google search API react</h1>
 
-## Available Scripts
+  <p align="center">
+    make search engine with google search api
+    <br />
+    <a href="https://rapidapi.com/apigeek/api/google-search3"><strong>Google search API >></strong></a>
+    <br />
+    <br />
+    <a href="https://search-api-project-85e76.web.app">View Demo</a>
+  </p>
+</div>
 
-In the project directory, you can run:
+## About The Project
 
-### `npm start`
+[![product-screenshot]](https://search-api-project-85e76.web.app/m)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This is a search engine project using google search API and Reactjs. This website has features such as searching for pictures and news. in the news section you can save it into bookmarks and also remove it from bookmarks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Built With
 
-### `npm test`
+- [![React][react.js]][react-url]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Development
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Install all dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Start app
 
-### `npm run eject`
+```sh
+npm run start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Testing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- use JSON server `to speed up fetching data`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  - Install json server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  ```sh
+  npm i -g json-server
+  ```
 
-## Learn More
+  - run JSON server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ```sh
+  json-server --watch db_result.json --port 3001
+  ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- run test
 
-### Code Splitting
+```sh
+npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- run test with coverage
 
-### Analyzing the Bundle Size
+```sh
+npm run coverage
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- this is the last coverage I get with `JSON server db_results.json`
+  ![test-coverage]
 
-### Making a Progressive Web App
+### Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- build app
 
-### Advanced Configuration
+```sh
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+and I have deployed this to firebase. <a href="https://search-api-project-85e76.web.app">demo link</a>
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contact
 
-### `npm run build` fails to minify
+Email - [m.ramadhan.ak@gmail.com](https://gmail:m.ramadhan.ak@gmail.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/Dhon23/google-search-api-react](https://github.com/Dhon23/google-search-api-react)
+
+Project Demo Link: [https://search-api-project-85e76.web.app](https://search-api-project-85e76.web.app/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: images/landing-page.png
+[test-coverage]: images/test-coverage.png
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
