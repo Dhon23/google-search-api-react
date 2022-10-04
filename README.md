@@ -15,7 +15,7 @@
 
 ## About The Project
 
-[![product-screenshot]](https://search-api-project-85e76.web.app/m)
+[![product-screenshot]](https://search-api-project-85e76.web.app)
 
 This is a search engine project using google search API and Reactjs. This website has features such as searching for pictures and news. in the news section you can save it into bookmarks and also remove it from bookmarks
 
@@ -109,7 +109,7 @@ Email - [m.ramadhan.ak@gmail.com](https://gmail:m.ramadhan.ak@gmail.com)
 
 Project Link: [https://github.com/Dhon23/google-search-api-react](https://github.com/Dhon23/google-search-api-react)
 
-Project Demo Link: [https://search-api-project-85e76.web.app](https://search-api-project-85e76.web.app/)
+Project Demo Link: [https://search-api-project-85e76.web.app](https://search-api-project-85e76.web.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,4 +118,4 @@ Project Demo Link: [https://search-api-project-85e76.web.app](https://search-api
 [product-screenshot]: images/landing-page.png
 [test-coverage]: images/test-coverage.png
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/
+[react-url]: https://reactjs.org
