@@ -68,7 +68,8 @@ npm run coverage
 ```
 
 - this is the last coverage I get with `JSON server db_results.json`
-  ![test-coverage]
+
+![test-coverage]
 
 ### Production
 
