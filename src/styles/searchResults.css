@@ -21,6 +21,7 @@
 
 .search-results > a > p {
   color: #616161;
+  overflow-wrap: break-word;
 }
 
 .search-results > a:hover > h3 {
