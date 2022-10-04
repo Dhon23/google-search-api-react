@@ -55,6 +55,28 @@ npm run start
   json-server --watch db_result.json --port 3001
   ```
 
+  - in src/pages/ResultPage.js command this
+
+  ```js
+  return axios.get(
+    `https://google-search3.p.rapidapi.com/api/v1/${type}/q=${keyword}`,
+    {
+      headers: {
+        "X-User-Agent": "desktop",
+        "X-Proxy-Location": "EU",
+        "X-RapidAPI-Key": "29c10a4edbmsh98f3f9db1830a0ep18d7d6jsn9071d9e0cf3c",
+        "X-RapidAPI-Host": "google-search3.p.rapidapi.com",
+      },
+    }
+  );
+  ```
+
+  - and in src/pages/ResultPage.js uncommand this
+
+  ```js
+  return axios.get("http://localhost:3001/" + type);
+  ```
+
 - run test
 
 ```sh
@@ -80,7 +102,6 @@ npm run build
 ```
 
 and I have deployed this to firebase. <a href="https://search-api-project-85e76.web.app">demo link</a>
-
 
 ## Contact
 
