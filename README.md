@@ -64,7 +64,7 @@ npm run start
       headers: {
         "X-User-Agent": "desktop",
         "X-Proxy-Location": "EU",
-        "X-RapidAPI-Key": "29c10a4edbmsh98f3f9db1830a0ep18d7d6jsn9071d9e0cf3c",
+        "X-RapidAPI-Key": "xxxxxxxxxxxxxxxxxxxxxxxx",
         "X-RapidAPI-Host": "google-search3.p.rapidapi.com",
       },
     }
